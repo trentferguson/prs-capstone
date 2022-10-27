@@ -1,6 +1,8 @@
 USE master -- switch to master db before creating new db
 GO
 
+-- TO DO: Drop database if exists
+
 CREATE DATABASE prs -- create the prs db
 
 USE prs -- switch to using prs db
@@ -9,10 +11,10 @@ GO
 CREATE TABLE Users ( -- create Users table
 
 	Id				INT				NOT NULL IDENTITY PRIMARY KEY,
-	Username		NVARCHAR(30)	NOT NULL UNIQUE,
-	Password		NVARCHAR(30)	NOT NULL,
-	FirstName		NVARCHAR(30)	NOT NULL,
-	LastName		NVARCHAR(30)	NOT NULL,
+	Username		NVARCHAR(30)	NOT NULL UNIQUE, -- KM: why did you choose nvarchar?
+	Password		NVARCHAR(30)	NOT NULL, -- KM: why did you choose nvarchar?
+	FirstName		NVARCHAR(30)	NOT NULL, -- KM: why did you choose nvarchar?
+	LastName		NVARCHAR(30)	NOT NULL, -- KM: why did you choose nvarchar?
 	Phone			VARCHAR(12)		NULL,
 	Email			VARCHAR(255)	NULL,
 	IsReviewer		BIT				NOT NULL,
